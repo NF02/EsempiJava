@@ -48,26 +48,25 @@ public Lista fusioneListe(Lista l) {
 }
 
 public boolean scambiaNodi(int i, int j) {
-Nodo tempI=NULL, tempJ=NULL;
-Nodo temp;
+	Nodo tempI=NULL, tempJ=NULL;
+	Nodo temp;
 
-int indice=0;
+	int indice=0;
 
-while (temp!=NULL && (tempI==NULL || tempJ==NULL)) {
-if (indice==i)
-tempI=temp;
-else if (indice==j)
-tempJ=temp;
+	while (temp!=NULL && (tempI==NULL || tempJ==NULL)) {
+		if (indice==i)
+			tempI=temp;
+		else if (indice==j)
+			tempJ=temp;
 
-temp=temp.getNext();
-indice++;
+	temp=temp.getNext();
+	indice++;
 }
 
-if (tempI!=NULL && tempJ!=NULL) {
-int numTemp=tempI.getInfo();
-tempI.setInfo(tempJ.getInfo());
-tempJ.setInfo(numTemp);
-return true;
-}
-else return false;
+	if (tempI!=NULL && tempJ!=NULL) {
+		int numTemp=tempI.getInfo();
+		tempI.setInfo(tempJ.getInfo());
+		tempJ.setInfo(numTemp);
+		return true;
+	} else return false;
 }
