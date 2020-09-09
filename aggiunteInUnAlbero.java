@@ -40,5 +40,6 @@ public class Albero<T>{
 		}else while(nodo.getFiglio()!=null){
 			i++;
 		nodo = nodo.getFratello();
+		}
 	}
 }
