@@ -26,11 +26,11 @@ public class Albero<T>{
 	public boolean aggiungiFiglio(T info, NodoAlbero<T> sorgente){
 		if(sorgente.getFiglio()==null){
 			NodoAlbero<T> nodo = new NodoAlbero<T>(info);
-		sorgente.setFiglio(nodo);
-		return true;
-	} else return aggiungiFratello(info,sorgente.getFiglio());
+			sorgente.setFiglio(nodo);
+			return true;
+		} else return aggiungiFratello(info,sorgente.getFiglio());
 
-}
+	}
 
 	public int conteggioFigli(NodoAlbero<T> nodo)
 		int i=0;
